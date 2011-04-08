@@ -1,0 +1,12 @@
+### 概要
+・SBCLによるicmpのtracerouteの実装
+・実行にはroot権限が必要
+
+### バージョン
+・0.0.1
+
+### API
+・(traceroute:trace destination &key (max-ttl 30) (interval 0.5))
+　- destination: tracerouteの宛先のIPアドレスかホスト名。文字列 or #(x x x x)形式で指定。
+　- max-ttl: ttlの最大値。これを越えても宛先に到達しない場合は、そこで中断される。
+　- interval: 各パケットを送信する間隔。秒単位。
